@@ -139,12 +139,19 @@ struct HistoricoAbastecimentoView: View {
                 }
                 
                 Spacer()
-                Button(action: onDelete) {
-                    Image(systemName: "trash")
-                        .foregroundColor(.red)
-                        .imageScale(.medium)
-                }
                 
+                VStack(alignment: .trailing, spacing: 15) {
+                    Button(action: onDelete) {
+                        Image(systemName: "trash")
+                            .foregroundColor(.red)
+                            .imageScale(.medium)
+                    }
+                    .buttonStyle(BorderlessButtonStyle())
+                }
+                .padding(8)
+                .background(Color(.systemGray6))
+                .cornerRadius(8)
+                .shadow(radius: 1)
             }
         }
         .padding(.vertical, 5)
