@@ -20,7 +20,9 @@ struct RelatoriosView: View {
                     NavigationLink(destination: RelatorioGastosView()) {
                         Text("Relatório de Gastos")
                     }
-                    Text("Relatório de Consumo").opacity(0.4)
+                    NavigationLink(destination: RelatorioConsumoView()) {
+                        Text("Relatório de Consumo")
+                    }
                     Text("Histórico de Abastecimento").opacity(0.4)
                 }
             }
