@@ -14,9 +14,14 @@ struct RelatoriosView: View {
                     .padding()
                 
                 List {
-                    Text("Relatório de Consumo")
-                    Text("Relatório de Gastos")
-                    Text("Histórico de Abastecimento")
+                    NavigationLink(destination: VeiculosView()) {
+                        Text("Veículos")
+                    }
+                    NavigationLink(destination: RelatorioGastosView()) {
+                        Text("Relatório de Gastos")
+                    }
+                    Text("Relatório de Consumo").opacity(0.4)
+                    Text("Histórico de Abastecimento").opacity(0.4)
                 }
             }
             .navigationTitle("Relatórios")
@@ -25,5 +30,5 @@ struct RelatoriosView: View {
 }
 
 #Preview {
-    ContentView()
-} 
+    RelatoriosView()
+}
